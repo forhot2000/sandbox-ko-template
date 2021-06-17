@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Knockout+jQuery Template</title>
+  </head>
+  <body>
+    <h1 data-bind="text: text"></h1>
+
+    <!-- prettier-ignore -->
+    <section>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js" integrity="sha512-7KKD9IIJL3eTtMFYDMg09ZvR+Vi2GyCvBawcXCBJlnbfuZtYv/z47wsWb6BIGFC/eLH09OVFARagNh1szpULNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </section>
+
+    <script>
+      $(function () {
+        var model = {
+          text: 'This is a static template, there is no bundler or bundling involved!'
+        };
+        ko.applyBindings(model);
+      });
+    </script>
+  </body>
+</html>
